@@ -21,6 +21,7 @@
       <th>ID</th>
       <th>CANCIÓN</th>
       <th>BANDA</th>
+      <th>Ver</th>
       </thead>
       <%
         for (Reproduccion reproduccion : listaRecomendados) {
@@ -31,6 +32,8 @@
         <td><%=reproduccion.getNombre_cancion()%>
         </td>
         <td><%=reproduccion.getIdbanda()%>
+        </td>
+        <td><button class="btn btn-success">Más de la banda</button>
         </td>
 
       </tr>
