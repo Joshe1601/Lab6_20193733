@@ -4,11 +4,14 @@ public class Reproduccion {
     private int idreproduccion;
     private String fecha;
     private int cancion_idcancion;
+    private String idbanda;
 
-    public Reproduccion(int idreproduccion, String nombre_tour, int nombre_ciudad) {
+    public Reproduccion(int idreproduccion, String nombre_tour, int nombre_ciudad, String idbanda) {
         this.idreproduccion = idreproduccion;
         this.fecha = nombre_tour;
         this.cancion_idcancion = nombre_ciudad;
+        this.idbanda = idbanda;
+
     }
 
     public int getIdreproduccion() {
@@ -33,5 +36,13 @@ public class Reproduccion {
 
     public void setCancion_idcancion(int cancion_idcancion) {
         this.cancion_idcancion = cancion_idcancion;
+    }
+
+    public String getIdbanda() {
+        return idbanda;
+    }
+
+    public void setIdbanda(String idbanda) {
+        this.idbanda = idbanda;
     }
 }
