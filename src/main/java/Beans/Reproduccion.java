@@ -1,33 +1,16 @@
 package Beans;
 
 public class Reproduccion {
-    private int idreproduccion;
-    private String fecha;
+
     private int cancion_idcancion;
-    private String idbanda;
+    private String nombre_cancion;
+    private String nombre_banda;
 
-    public Reproduccion(int idreproduccion, String nombre_tour, int nombre_ciudad, String idbanda) {
-        this.idreproduccion = idreproduccion;
-        this.fecha = nombre_tour;
-        this.cancion_idcancion = nombre_ciudad;
-        this.idbanda = idbanda;
+    public Reproduccion(int idreproduccion, String nombre_cancion, String nombre_banda) {
+        this.cancion_idcancion = idreproduccion;
+        this.nombre_cancion = nombre_cancion;
+        this.nombre_banda = nombre_banda;
 
-    }
-
-    public int getIdreproduccion() {
-        return idreproduccion;
-    }
-
-    public void setIdreproduccion(int idreproduccion) {
-        this.idreproduccion = idreproduccion;
-    }
-
-    public String getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
     }
 
     public int getCancion_idcancion() {
@@ -38,11 +21,22 @@ public class Reproduccion {
         this.cancion_idcancion = cancion_idcancion;
     }
 
-    public String getIdbanda() {
-        return idbanda;
+    public String getNombre_cancion() {
+        return nombre_cancion;
     }
 
-    public void setIdbanda(String idbanda) {
-        this.idbanda = idbanda;
+    public void setNombre_cancion(String nombre_cancion) {
+        this.nombre_cancion = nombre_cancion;
     }
+
+    public String getNombre_banda() {
+        return nombre_banda;
+    }
+
+    public void setNombre_banda(String nombre_banda) {
+        this.nombre_banda = nombre_banda;
+    }
+
 }
+
+

@@ -10,7 +10,7 @@ public class BandaDao {
     private static String url = "jdbc:mysql...";
 
     //En este caso se usa preparedStatement
-    public ArrayList<Banda> obtenerListaBandas(String filter) {
+    public ArrayList<Banda> obtenerListaBandas() {
         ArrayList<Banda> listabandas = new ArrayList<>();
 
         return listabandas;
