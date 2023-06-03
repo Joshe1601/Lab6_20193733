@@ -5,6 +5,7 @@
 <jsp:include page="/static/head.jsp">
     <jsp:param name="title" value="Lista de Canciones por banda"/>
 </jsp:include>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 <div class='container'>
     <jsp:include page="/includes/navbar.jsp">
@@ -28,6 +29,7 @@
             <th>ID</th>
             <th>CANCIÓN</th>
             <th>BANDA</th>
+            <th>Añadir a favoritos</th>
             </thead>
             <%
                 for (Reproduccion reproduccion : listaCanciones) {
@@ -38,6 +40,8 @@
                 <td><%=reproduccion.getNombre_cancion()%>
                 </td>
                 <td><%=reproduccion.getIdbanda()%>
+                </td>
+                <td><a><span class="btn fa fa-star" style="color: yellow"></span></a>
                 </td>
 
             </tr>

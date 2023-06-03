@@ -268,3 +268,8 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2021-11-08 11:12:43
+
+CREATE TABLE IF NOT EXISTS `lab6sw1`.`favoritos` (
+  `idfavoritos` INT NOT NULL,
+  PRIMARY KEY (`idfavoritos`))
+ENGINE = InnoDB;
