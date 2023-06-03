@@ -20,9 +20,9 @@ public class CancionServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         CancionDao cancionDao = new CancionDao();
-        ArrayList<Reproduccion> listaRecomendados = cancionDao.obtenerListaCanciones();
+        ArrayList<Reproduccion> listaCanciones = cancionDao.obtenerListaCanciones();
 
-        request.setAttribute("listaCanciones",listaRecomendados);
+        request.setAttribute("listaCanciones",listaCanciones);
 
         RequestDispatcher view =request.getRequestDispatcher("listaCanciones.jsp");
         view.forward(request,response);

@@ -20,11 +20,15 @@ public class CancionDao {
             e.printStackTrace();
         }
 
+        String query =  "SELECT c.idcancion, c.nombre_cancion AS nombre_cancion, b.idbanda AS nombre_banda\n" +
+                        "FROM banda b\n" +
+                        "JOIN cancion c ON b.idbanda = c.banda\n" +
+                        "ORDER BY b.idbanda;";
 
         ArrayList<Reproduccion> listaCanciones = new ArrayList<>();
         try (Connection conn = DriverManager.getConnection(url, user, pass);
              Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery("select * from tour where nombre_tour like '%world%'")) {
+             ResultSet rs = stmt.executeQuery(query)) {
 
             while (rs.next()) {
                 int id = rs.getInt(1);
@@ -34,8 +38,9 @@ public class CancionDao {
                 listaCanciones.add(new Reproduccion(id,nombre,banda));
             }
 
-        } catch (SQLException e) {
+        } catch (SQLException throwables) {
             System.out.println("No se pudo realizar la busqueda");
+            throwables.printStackTrace();
         }
         return listaCanciones;
     }
