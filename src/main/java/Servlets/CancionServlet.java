@@ -21,6 +21,7 @@ public class CancionServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         CancionDao cancionDao = new CancionDao();
         ArrayList<Reproduccion> listaCanciones = cancionDao.obtenerListaCanciones();
+        String action = request.getParameter("action");
 
         request.setAttribute("listaCanciones",listaCanciones);
 

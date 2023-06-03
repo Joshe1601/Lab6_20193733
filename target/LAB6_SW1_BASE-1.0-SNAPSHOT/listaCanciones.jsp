@@ -17,7 +17,7 @@
            <h1 class='text-light'>Lista de Canciones por banda</h1>
        </div>
            <div class="col-lg-6 text-right" >
-               <a class="btn btn-warning" href="#">Mostrar todas las canciones</a>
+               <a id="cancionesCompletas" class="btn btn-warning">Mostrar todas las canciones</a>
            </div>
        </div>
 
@@ -49,5 +49,13 @@
 
 </div>
 <jsp:include page="/static/scripts.jsp"/>
+
+<script>
+    document.getElementById('cancionesCompletas').addEventListener('click', function() {
+        this.style.display = 'none';
+        window.location.href = 'listaCanciones.jsp?button=accion';
+    });
+</script>
+
 </body>
 </html>
