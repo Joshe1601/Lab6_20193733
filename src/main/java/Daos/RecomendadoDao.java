@@ -10,7 +10,7 @@ public class RecomendadoDao {
 
     private static String user = "root";
     private static String pass = "123456";
-    private static String url = "jdbc:mysql://127.0.0.1:3306/lab6sw1";
+    private static String url = "jdbc:mysql://127.0.0.1:3306/lab6sw1?serverTimezone=America/Lima";
 
 
     public ArrayList<Reproduccion> obtenerListaReproducciones(){
@@ -20,7 +20,7 @@ public class RecomendadoDao {
             e.printStackTrace();
         }
 
-        String query = "SELECT c.idcancion, c.nombre_cancion AS nombre_cancion, b.nombre_banda AS nombre_banda " +
+        String query = "SELECT c.idcancion, c.nombre_cancion AS nombre_cancion, b.idbanda AS nombre_banda " +
                 "FROM reproduccion r " +
                 "JOIN cancion c ON r.cancion_idcancion = c.idcancion " +
                 "JOIN banda b ON c.banda = b.idbanda " +

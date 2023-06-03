@@ -26,11 +26,11 @@
         for (Reproduccion reproduccion : listaRecomendados) {
       %>
       <tr>
-        <td>Esto es una prueba
+        <td><%=reproduccion.getCancion_idcancion()%>
         </td>
         <td><%=reproduccion.getNombre_cancion()%>
         </td>
-        <td><%=reproduccion.getNombre_banda()%>
+        <td><%=reproduccion.getIdbanda()%>
         </td>
 
       </tr>
